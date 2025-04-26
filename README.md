@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# 🚦 Gemelo Digital Prueba
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido a **Gemelo Digital Prueba**! Este es un proyecto frontend construido con Vite ⚡, React ⚛️ y TypeScript 🦕.
 
-Currently, two official plugins are available:
+## 🚀 Características
+- Interfaz moderna y rápida gracias a Vite
+- Componentes en React con tipado TypeScript
+- Simulación de un LED 🔴 controlado por un botón
+- Diseño responsive y minimalista
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖥️ Vista principal
+En la página principal encontrarás:
+- Un botón "Encender" 🔘
+- Un LED simulado que se enciende (rojo) mientras mantienes presionado el botón
 
-## Expanding the ESLint configuration
+## 📦 Instalación
+1. Clona este repositorio:
+   ```bash
+   git clone <url-del-repo>
+   cd gemelodigitalprueba
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🏃‍♂️ Ejecución
+Para iniciar el servidor de desarrollo:
+```bash
+npm run dev
+```
+Abre tu navegador en [http://localhost:5173](http://localhost:5173) para ver la app.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Scripts útiles
+- `npm run dev` — Inicia el servidor de desarrollo
+- `npm run build` — Genera la build de producción
+- `npm run preview` — Previsualiza la build
+- `npm run lint` — Linting del código
+
+## 📁 Estructura principal
+```
+├── src/
+│   ├── App.tsx        # Componente principal
+│   ├── main.tsx       # Punto de entrada
+│   ├── index.css      # Estilos globales
+│   └── App.css        # Estilos del componente App
+├── public/            # Archivos estáticos
+├── package.json       # Configuración de dependencias y scripts
+├── vite.config.ts     # Configuración de Vite
+└── ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
