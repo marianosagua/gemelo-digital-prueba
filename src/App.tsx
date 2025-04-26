@@ -29,7 +29,16 @@ function App() {
         onMouseLeave={handleMouseUp}
         onTouchStart={handleMouseDown}
         onTouchEnd={handleMouseUp}
-        style={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
+        style={{
+          fontSize: "1.5rem",
+          padding: "1rem 2rem",
+          transform: ledOn ? "scale(0.95)" : "scale(1)",
+          backgroundColor: ledOn ? "#e57373" : undefined,
+          boxShadow: ledOn ? "0 2px 12px 0 #e57373" : undefined,
+          transition: "all 0.15s cubic-bezier(.4,0,.2,1)",
+          outline: 'none',
+        }}
+        tabIndex={0}
       >
         Encender
       </button>
